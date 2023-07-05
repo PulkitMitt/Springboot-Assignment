@@ -23,6 +23,11 @@ public class TodoController {
         return todoService.getDoneTodos();
     }
 
+    @GetMapping("todo/one/{todoId}")
+    public Todo getOneTodo(@PathVariable Integer todoId){
+        return todoService.getOneTodo(todoId);
+    }
+
     @GetMapping("todo/undone")
     public List<Todo> getUndoneTodos(){
         return todoService.getUndoneTodos();

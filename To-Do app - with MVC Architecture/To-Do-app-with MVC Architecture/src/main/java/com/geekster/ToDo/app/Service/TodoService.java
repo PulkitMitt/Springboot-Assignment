@@ -20,6 +20,16 @@ public class TodoService {
         return todoRepo.getMyTodos();
     }
 
+    public Todo getOneTodo(Integer todoId){
+        for(Todo getTodo : todoRepo.getMyTodos()){
+            if(getTodo.getTodoId().equals(todoId)){
+                return getTodo;
+            }
+        }
+        throw new RuntimeException();
+
+    }
+
 
     public List<Todo> getDoneTodos( ){
         List<Todo> doneTodos = new ArrayList<>();
