@@ -8,3 +8,8 @@ import org.yaml.snakeyaml.events.Event;
 @Repository
 public interface IRoomRepo extends CrudRepository<HotelRoom, Long> {
 }
+
+
+
+
+
